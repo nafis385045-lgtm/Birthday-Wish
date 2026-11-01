@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Happy Birthday! 👑</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Glow -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73130.mp3?filename=happy-birthday-15794.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Main Birthday Card -->
+    <main class="card">
+
+        <div class="badge">For My Cutie Pie 👑</div>
+
+        <!-- Profile Picture -->
+        <div class="profile-container">
+
+            <div class="crown-icon">👑</div>
+
+            <div class="profile-frame">
+                <img
+                    src="/tamu-baby.png"
+                    alt="Birthday Girl"
+                    class="profile-img"
+                >
+            </div>
+
+        </div>
+
+        <!-- Birthday Text -->
+        <h1 class="title">Happy Birthday!</h1>
+
+         <p class="subtitle">
+            "Happy Birthday to my favorite person! Jani na keno, kintu tomar sathe kora protiti muhurto amar shobcheye beshi valo lage. Tumi amar kache 'just a friend' er theke onek beshi."
+        </p>
+        
+        <p class="subtitle mt-2">
+            Ami onek plan korsilam tmr Birthday te attend korbo but possible holo na, kintu next time ইনশাআল্লাহ দেখা হবে!
+        </p>
+
+        <div class="divider"></div>
+
+        <!-- Birthday Cake -->
+        <div class="cake-area" onclick="cutCake()">
+
+            <div class="cake-box" id="cakeBox">
+
+                <div class="knife">🔪</div>
+
+                <div class="candle">
+                    <div class="flame" id="flame"></div>
+                </div>
+
+                <div class="cake-wrapper">
+
+                    <div class="cake-left"></div>
+                    <div class="cake-right"></div>
+
+                </div>
+
+            </div>
+
+            <span class="hint-text" id="cakeHint">
+                Tap the cake to cut it! 🎂
+            </span>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+
+            <button class="btn celebrate-btn" onclick="fireConfetti()">
+                Celebrate! 🎉
+            </button>
+
+            <button class="btn wish-btn" onclick="openWish()">
+                Read Your Special Wish 💌
+            </button>
+
+        </div>
+
+        <p class="footer-text">
+            Love You cutie pie ❤️ 
+        </p>
+
+    </main>
+
+    <!-- Wish Modal -->
+    <div class="modal" id="wishModal" onclick="outsideClose(event)">
+
+        <div class="modal-content">
+
+            <div class="wish-icon">💌</div>
+
+            <h3>A Special Wish</h3>
+
+            <p>
+                Happy Birthday to the girl who makes ordinary days feel extraordinary. 
+                So lucky to have you in my corner (and forever in my heart). Have the best day!
+
+                Happy birthday my Cutie pie
+                Best wishes tor you • ❤️
+                <br>
+                <br>
+                <br>
+
+                Btw tmi amake ektuo valobasho na 🥹😞
+
+            </p>
+
+            <button class="close-btn" onclick="closeWish()">
+                Close ❤️
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
